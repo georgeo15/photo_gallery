@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql.metropolia.fi
--- Generation Time: Sep 19, 2017 at 12:21 PM
+-- Generation Time: Sep 19, 2017 at 06:10 PM
 -- Server version: 10.1.23-MariaDB
 -- PHP Version: 7.1.9
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `georgeo`
+-- Database: `test`
 --
 
 -- --------------------------------------------------------

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql.metropolia.fi
--- Generation Time: Sep 19, 2017 at 06:10 PM
+-- Generation Time: Sep 20, 2017 at 10:40 AM
 -- Server version: 10.1.23-MariaDB
 -- PHP Version: 7.1.9
 
@@ -28,8 +28,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tb_gallery` (
   `pic_id` int(50) NOT NULL,
-  `pic_name` varchar(50) NOT NULL,
-  `pic_path` varchar(50) NOT NULL,
+  `base_name` varchar(50) NOT NULL,
+  `pic_full_path` varchar(50) NOT NULL,
+  `pic_fmt` varchar(5) NOT NULL,
   `pic_post_date` datetime(6) NOT NULL,
   `pic_status` tinyint(1) NOT NULL DEFAULT '0',
   `pic_date_approved` datetime(6) NOT NULL
@@ -53,7 +54,7 @@ ALTER TABLE `tb_gallery`
 -- AUTO_INCREMENT for table `tb_gallery`
 --
 ALTER TABLE `tb_gallery`
-  MODIFY `pic_id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `pic_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,230 @@
+
+/*CSS RESET START*/
+*:not(title){margin: 0;padding: 0;	border: 0;font-size: 100%;font-family:font-family: "Times New Roman", Georgia, Serif;line-height: 1;vertical-align: baseline;list-style:none;border-style:none;}
+/*CSS RESET END*/
+
+
+
+header{
+	position:relative;
+	color:#000;
+	text-align:center;
+	height:20px;
+	padding:10px;
+	overflow:hidden;
+	box-shadow: 0px 10px 0px 10px #888888;
+	border-radius:5px;
+	bottom:30px;
+}
+
+body{
+	
+	color:#FFF;
+	font-size:13px;
+	background: #E9E9E9;
+	margin:0 auto;
+	display: block;
+}
+
+
+#wrapper{
+	position:relative;
+	width:60%;
+	height:100%;
+	padding:2%;
+	margin:0 auto;
+}
+
+
+
+#tiles_canvas{
+	position:relative;
+	height:20%;
+	padding: 15px;
+	overflow:hidden;
+	box-shadow: 0px 0px 10px 10px #888888;
+	bottom:1%;
+	margin:0 auto;
+	background:url('images/wall.jpg');
+}
+
+
+
+div.nomargins{
+	margin-right:0px;
+}
+.clear{
+	clear:both;
+}
+
+a, a:visited {
+	color:#00BBFF;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+.image{
+	float:left;
+	width:200px;
+	height:250px;
+}
+
+.image a{
+	width:200px;
+	height:250px;
+	text-indent:-99999px;
+	display:block;
+}
+
+h1{
+	font-size:28px;
+	font-weight:bold;
+	font-family:"Trebuchet MS",Arial, Helvetica, sans-serif;
+}
+
+h2{
+	font-weight:normal;
+	font-size:14px;
+	color:#FFF;
+}
+
+/*****************************PAGINATION********************/
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+	font-size: 22px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+/*************************POLAROID**************************/
+
+div.polaroid {
+    width: 30%;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 0px 0px 5px 5px #AAA;
+}
+
+div.rotate_rights{
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+div.image:hover {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+p.caption{color:white;}
+
+/*******************OVERLAY STYLING***********/
+.image {
+  position: relative;
+  width: 30%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  transition: .5s ease;
+  opacity:0.6;
+}
+
+.image:hover .overlay {
+  height: 50%;
+  transition: .5s ease;
+ opacity:0.6;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/***********FILTER SECTION*****************/
+#search-form{
+	margin-bottom:2%;
+	
+}
+input[id='search'] {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+ #select {
+    width: 18%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 4px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	float:left;
+}
+
+input[id='search']:focus {
+    width: 80%;
+}
+
+
+
+
+/*********FOOTER*************/
+#footer{
+	position:relative;
+	height:20%;
+	box-shadow: 0px 0px 1px 1px #888888;
+	color:#000;
+	margin-top:2%;
+	overflow:hidden;
+	border-radius:5px;
+}

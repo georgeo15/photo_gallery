@@ -38,7 +38,7 @@
 </script>
 </div>
 <div style="color:black;font-size:5em">
-TYPE/CLASSIC ART
+TYPE/ABSTRACT ART 
 </div>
 <br><br><br>
 <div id="tiles_canvas">

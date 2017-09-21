@@ -1,10 +1,4 @@
-<?php 
-include_once('../config/cons.php.inc');
 
-?>
-
-
- 
 <?php
 
 
@@ -31,27 +25,34 @@ class cls_read_dir{
 					//To Do: Safety:Jump the reserved directories from listing										
 					if($file =='.' || $file=='..') continue;
 					
-					// To Do:Check file size limit //Check later
-					/*if (filesize($file) > 5000) {
-						//echo "<pre>ERROR:<i>Too large file found!</i></pre>";exit;
-					}*/
+					// To Do:Check file size limit //Check more later
+						/*if (filesize($file) > 50000) {
+							echo "<pre>ERROR:<i>Too large file found!</i></pre>";exit;
+						}*/
 								
 						//To Do: Get the path information
 						$file = pathinfo($file);
 						
 						//To Do: Extract the file information //Lower the case for consistency
-						$basename = strtolower($file['basename']);
-						$filename = strtolower($file['filename']);
-						$fmt_allowed 	  = strtolower($file['extension']);
+						$basename		 = strtolower($file['basename']);
+						$filename 		 = strtolower($file['filename']);
+						$fmt_allowed 	 = strtolower($file['extension']);
 						
 						 //To Do: Get file full  path
 						 $file_full_path = _DATA_DIR_.'/'.$basename;
 						 
-						 ////To Do: Check file file format;To Do: Call Insert data op
-						 if($fmt_allowed == "jpg" || $fmt_allowed == "png" || $fmt_allowed == "gif" || $fmt_allowed == "jpeg" ){
-							$this->fxn_insert_data($basename,$fmt_allowed,$file_full_path );
-							
-						 }else{
+						 //To Do: Check file file format;To Do: Call Insert data op
+						if($fmt_allowed == "jpg" || $fmt_allowed == "png" || $fmt_allowed == "gif" || $fmt_allowed == "jpeg" ){
+							#$this->fxn_insert_data($basename,$fmt_allowed,$file_full_path );
+
+						echo( '
+							<div class="image polaroid rotate_right" style="background:url('.$file_full_path.') no-repeat;">
+							<a href="'.$file_full_path.'" title="'.$filename.'" target="_blank">'.$filename.'</a>
+							<div class="overlay"><div class="text">'.$filename.'.<br><span>1880-1970</span></div></div>
+							</div>'
+						);
+
+						}else{
 							 echo "<pre>ERROR:<i>Wrong file format found!</i></pre>";exit;
 							
 						}
@@ -64,7 +65,7 @@ class cls_read_dir{
 				 return $file_full_path;
 		  }
 		}
-		//To Do:Close connection after last transaction
+		//To Do:Close connection after the last transaction
 		$db_conn->close();
 	}
 	
@@ -123,48 +124,3 @@ $read_dir_obj = new cls_read_dir();
 $read_dir_obj ->fxn_read_dir();
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					
-				  
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
